@@ -11,7 +11,7 @@ public class Savings extends Account implements InterestBearing {
     @Override
     public double calculateInterest() {
         double interestAmount = getBalance() * MONTHLY_INTEREST_RATE;
-        deposit(interestAmount); // Use the deposit method to apply interest
+        deposit(interestAmount);
         System.out.printf("Applied interest of %.2f to Savings account %s.%n", interestAmount, getAccountNumber());
         return interestAmount;
     }
