@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1a2333;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<center>
+<VBox alignment="CENTER" spacing="20.0">
+<Label text="Deposit Funds" textFill="#f0f3f4">
+<font><Font name="Segoe UI Bold" size="36.0"/></font>
+</Label>
+<VBox alignment="CENTER_LEFT" spacing="10.0" maxWidth="300.0">
+<Label text="Select Account" textFill="#bdc3c7">
+<font><Font name="Segoe UI Regular" size="14.0"/></font>
+</Label>
+<ChoiceBox fx:id="accountChoiceBox" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #2c3e50; -fx-mark-color: #f0f3f4; -fx-background-radius: 5; -fx-border-color: #34495e; -fx-border-radius: 5;">
+<items/>
+</ChoiceBox>
+<Label text="Deposit Amount" textFill="#bdc3c7">
+<font><Font name="Segoe UI Regular" size="14.0"/></font>
+<VBox.margin><Insets top="10.0"/></VBox.margin>
+</Label>
+<TextField fx:id="amountField" promptText="Enter amount to deposit" prefHeight="40.0" style="-fx-background-color: #2c3e50; -fx-text-fill: #f0f3f4; -fx-border-color: #34495e; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #7f8c8d;">
+<font><Font size="14.0"/></font>
+</TextField>
+<Button fx:id="depositButton" mnemonicParsing="false" text="Deposit" prefWidth="300.0" prefHeight="45.0" style="-fx-background-color: #4a637d; -fx-text-fill: white; -fx-font-size: 18px; -fx-background-radius: 5; -fx-cursor: hand;" onMouseEntered="((Button)event.source).setStyle('-fx-background-color: #5d7a9b; -fx-text-fill: white; -fx-font-size: 18px; -fx-background-radius: 5; -fx-cursor: hand;')" onMouseExited="((Button)event.source).setStyle('-fx-background-color: #4a637d; -fx-text-fill: white; -fx-font-size: 18px; -fx-background-radius: 5; -fx-cursor: hand;')">
+<VBox.margin><Insets top="20.0"/></VBox.margin>
+</Button>
+</VBox>
+</VBox>
+</center>
+<bottom>
+<Label fx:id="backLink" text="Back to Main Menu" textFill="#7f8c8d" BorderPane.alignment="CENTER" style="-fx-cursor: hand;" onMouseEntered="((Label)event.source).setStyle('-fx-underline: true; -fx-text-fill: #bdc3c7; -fx-cursor: hand;')" onMouseExited="((Label)event.source).setStyle('-fx-underline: false; -fx-text-fill: #7f8c8d; -fx-cursor: hand;')">
+<padding><Insets bottom="20.0"/></padding>
+<font><Font size="12.0"/></font>
+</Label>
+</bottom>
+</BorderPane>
