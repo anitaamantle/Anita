@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
@@ -9,62 +10,109 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #1a2333;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-<center>
-<VBox alignment="CENTER" spacing="15.0">
-<Label text="Create New Account" textFill="#f0f3f4">
-<font><Font name="Segoe UI Bold" size="36.0"/></font>
-</Label>
-<Label text="Join AAT BANKS today." textFill="#bdc3c7">
-<font><Font name="Segoe UI Regular" size="16.0"/></font>
-<VBox.margin><Insets bottom="10.0"/></VBox.margin>
-</Label>
-<VBox alignment="CENTER_LEFT" spacing="10.0" maxWidth="350.0">
-<Label text="Full Name" textFill="#bdc3c7">
-<font><Font name="Segoe UI Regular" size="14.0"/></font>
-</Label>
-<TextField fx:id="fullNameField" promptText="Enter your full name" prefHeight="40.0" style="-fx-background-color: #2c3e50; -fx-text-fill: #f0f3f4; -fx-border-color: #34495e; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #7f8c8d;">
-<font><Font size="14.0"/></font>
-</TextField>
-<Label text="Email Address" textFill="#bdc3c7">
-<font><Font name="Segoe UI Regular" size="14.0"/></font>
-<VBox.margin><Insets top="10.0"/></VBox.margin>
-</Label>
-<TextField fx:id="emailField" promptText="Enter your email address" prefHeight="40.0" style="-fx-background-color: #2c3e50; -fx-text-fill: #f0f3f4; -fx-border-color: #34495e; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #7f8c8d;">
-<font><Font size="14.0"/></font>
-</TextField>
-<Label text="Password" textFill="#bdc3c7">
-<font><Font name="Segoe UI Regular" size="14.0"/></font>
-<VBox.margin><Insets top="10.0"/></VBox.margin>
-</Label>
-<PasswordField fx:id="passwordField" promptText="Create a password" prefHeight="40.0" style="-fx-background-color: #2c3e50; -fx-text-fill: #f0f3f4; -fx-border-color: #34495e; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #7f8c8d;">
-<font><Font size="14.0"/></font>
-</PasswordField>
-<Label text="Confirm Password" textFill="#bdc3c7">
-<font><Font name="Segoe UI Regular" size="14.0"/></font>
-<VBox.margin><Insets top="10.0"/></VBox.margin>
-</Label>
-<PasswordField fx:id="confirmPasswordField" promptText="Re-enter your password" prefHeight="40.0" style="-fx-background-color: #2c3e50; -fx-text-fill: #f0f3f4; -fx-border-color: #34495e; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #7f8c8d;">
-<font><Font size="14.0"/></font>
-</PasswordField>
-<Label text="Account Type" textFill="#bdc3c7">
-<font><Font name="Segoe UI Regular" size="14.0"/></font>
-<VBox.margin><Insets top="10.0"/></VBox.margin>
-</Label>
-<ChoiceBox fx:id="accountTypeChoiceBox" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: #2c3e50; -fx-mark-color: #f0f3f4; -fx-background-radius: 5; -fx-border-color: #34495e; -fx-border-radius: 5;">
-<items/>
-<VBox.margin><Insets bottom="10.0"/></VBox.margin>
-</ChoiceBox>
-<Button fx:id="createAccountButton" mnemonicParsing="false" text="Create Account" prefWidth="350.0" prefHeight="45.0" style="-fx-background-color: #4a637d; -fx-text-fill: white; -fx-font-size: 18px; -fx-background-radius: 5; -fx-cursor: hand;" onMouseEntered="((Button)event.source).setStyle('-fx-background-color: #5d7a9b; -fx-text-fill: white; -fx-font-size: 18px; -fx-background-radius: 5; -fx-cursor: hand;')" onMouseExited="((Button)event.source).setStyle('-fx-background-color: #4a637d; -fx-text-fill: white; -fx-font-size: 18px; -fx-background-radius: 5; -fx-cursor: hand;')">
-<VBox.margin><Insets top="20.0"/></VBox.margin>
-</Button>
-</VBox>
-</VBox>
-</center>
-<bottom>
-<Label fx:id="loginLink" text="Already have an account? Login here." textFill="#7f8c8d" BorderPane.alignment="CENTER" style="-fx-cursor: hand;" onMouseEntered="((Label)event.source).setStyle('-fx-underline: true; -fx-text-fill: #bdc3c7; -fx-cursor: hand;')" onMouseExited="((Label)event.source).setStyle('-fx-underline: false; -fx-text-fill: #7f8c8d; -fx-cursor: hand;')">
-<padding><Insets bottom="20.0"/></padding>
-<font><Font size="12.0"/></font>
-</Label>
-</bottom>
+<BorderPane fx:controller="com.aatbanks.app.createaccountcontroller" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #1a2333;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox alignment="CENTER" spacing="15.0">
+            <Label text="Create New Account" textFill="#f0f3f4">
+                <font>
+                    <Font name="Segoe UI Bold" size="36.0" />
+                </font>
+            </Label>
+            <Label text="Join AAT BANKS today." textFill="#bdc3c7">
+                <font>
+                    <Font name="Segoe UI Regular" size="16.0" />
+                </font>
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin>
+            </Label>
+            <VBox alignment="CENTER_LEFT" spacing="10.0" maxWidth="350.0">
+                <Label text="Full Name" textFill="#bdc3c7">
+                    <font>
+                        <Font name="Segoe UI Regular" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="fullNameField" promptText="Enter your full name" prefHeight="40.0" style="-fx-background-color: #2c3e50; -fx-text-fill: #f0f3f4; -fx-border-color: #34495e; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #7f8c8d;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <Label text="Email Address" textFill="#bdc3c7">
+                    <font>
+                        <Font name="Segoe UI Regular" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="emailField" promptText="Enter your email address" prefHeight="40.0" style="-fx-background-color: #2c3e50; -fx-text-fill: #f0f3f4; -fx-border-color: #34495e; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #7f8c8d;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <Label text="Password" textFill="#bdc3c7">
+                    <font>
+                        <Font name="Segoe UI Regular" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <PasswordField fx:id="passwordField" promptText="Create a password" prefHeight="40.0" style="-fx-background-color: #2c3e50; -fx-text-fill: #f0f3f4; -fx-border-color: #34495e; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #7f8c8d;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </PasswordField>
+                <Label text="Confirm Password" textFill="#bdc3c7">
+                    <font>
+                        <Font name="Segoe UI Regular" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <PasswordField fx:id="confirmPasswordField" promptText="Re-enter your password" prefHeight="40.0" style="-fx-background-color: #2c3e50; -fx-text-fill: #f0f3f4; -fx-border-color: #34495e; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #7f8c8d;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </PasswordField>
+                <Label text="Account Type" textFill="#bdc3c7">
+                    <font>
+                        <Font name="Segoe UI Regular" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <ChoiceBox fx:id="accountTypeChoiceBox" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: #2c3e50; -fx-mark-color: #f0f3f4; -fx-background-radius: 5; -fx-border-color: #34495e; -fx-border-radius: 5;">
+                    <!-- The problematic <items/> tag has been removed -->
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </ChoiceBox>
+                <Button fx:id="createAccountButton" mnemonicParsing="false" text="Create Account" prefWidth="350.0" prefHeight="45.0" 
+                    style="-fx-background-color: #4a637d; -fx-text-fill: white; -fx-font-size: 18px; -fx-background-radius: 5; -fx-cursor: hand;" 
+                    onAction="#handleCreateAccount"
+                    onMouseEntered="((Button)event.source).setStyle('-fx-background-color: #5d7a9b; -fx-text-fill: white; -fx-font-size: 18px; -fx-background-radius: 5; -fx-cursor: hand;')" 
+                    onMouseExited="((Button)event.source).setStyle('-fx-background-color: #4a637d; -fx-text-fill: white; -fx-font-size: 18px; -fx-background-radius: 5; -fx-cursor: hand;')">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Button>
+            </VBox>
+        </VBox>
+    </center>
+    <bottom>
+        <Label fx:id="loginLink" text="Already have an account? Login here." textFill="#7f8c8d" BorderPane.alignment="CENTER" style="-fx-cursor: hand;" 
+            onMouseClicked="#handleLoginLink"
+            onMouseEntered="((Label)event.source).setStyle('-fx-underline: true; -fx-text-fill: #bdc3c7; -fx-cursor: hand;')" 
+            onMouseExited="((Label)event.source).setStyle('-fx-underline: false; -fx-text-fill: #7f8c8d; -fx-cursor: hand;')">
+            <padding>
+                <Insets bottom="20.0" />
+            </padding>
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+    </bottom>
 </BorderPane>
