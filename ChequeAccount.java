@@ -20,7 +20,7 @@ public class Cheque extends Account implements WithdrawMoney {
 
         if (getBalance() >= amount) {
             setBalance(getBalance() - amount);
-            System.out.printf("Withdrew %.2f from Cheque account %s. New balance: %.2f%n", amount, getAccountNumber(), getBalance());
+            recordWithdrawal(amount);
         } else {
             System.out.printf("ERROR: Insufficient funds in Cheque account %s. Current balance: %.2f%n", getAccountNumber(), getBalance());
         }
