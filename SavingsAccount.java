@@ -1,6 +1,6 @@
 public class Savings extends Account implements InterestBearing {
 
-    private static final double MONTHLY_INTEREST_RATE = 0.0005; // 0.05%
+    private static final double MONTHLY_INTEREST_RATE = 0.0005; 
 
 
     public Savings(String accountNumber, String accountBranch, double initialBalance) {
@@ -16,9 +16,9 @@ public class Savings extends Account implements InterestBearing {
         return interestAmount;
     }
 
-   
+    
     @Override
-    public void withdraw(double amount) {
+    public void withdraw(double amount) 
         System.out.printf("ERROR: Withdrawals are NOT allowed for Savings account %s.%n", getAccountNumber());
     }
 }
